@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo_List</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h1>
+        My Todos
+        <span>({{ remaining.length }}/{{todos.length}})</span>
+        <button class="purge" v-on:click="deleteAllItem">Purge</button>
+      </h1>
+
+      <ul v-if="todos.length">
+        <li v-for="(todo, index) in todos">
+          <input type="checkbox" v-model="todo.isDone">
+          <span v-bind:class="{done: todo.isDone}">
+            {{ todo.title }}
+          </span>
+          <span class="delete" v-on:click="deleteItem(index)">[X]</span>
+        </li>
+      </ul>
+      <ul class="nothing" v-else>
+        <li>Nothing to do !</li>
+      </ul>
+
+      <form v-on:submit.prevent="addText">
+        <input type="text" v-model="newText" class="newText">
+        <input type="submit" value="Add">
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

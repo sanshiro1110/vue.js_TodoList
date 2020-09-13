@@ -1,0 +1,47 @@
+body {
+  font-size: 16px;
+  font-family: verdana sans-serif;
+}
+
+#app .container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+#app h1 {
+  border-bottom: 1px solid #bbb;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+#app h1 span {
+  font-weight: normal;
+  font-size: 16px;
+  color: #888;
+}
+
+#app h1 .purge {
+  float: right;
+}
+
+#app ul {
+  padding: 0;
+  list-style: none;
+}
+
+#app .done {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+#app .delete {
+  color: #08c;
+}
+
+#app .nothing {
+  text-align: center;
+}
+
+#app .newText {
+  line-height: 1.5;
+}
